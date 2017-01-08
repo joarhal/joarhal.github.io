@@ -8,18 +8,37 @@
     <div id='app'>
       DEMO OK APP
     </div>
-    <script src='okjssdk.js'></script>
+    <!-- <script src='okjssdk.js'></script> -->
+    <script type="text/javascript" src="//api.ok.ru/js/fapi5.js" defer="defer"></script>
     <script>
-      var config = {
-        app_id: "1249394176",
-        app_key: "CBAPDJHLEBABABABA"
-      };
-
-      OKSDK.init(config, function() {
-        console.log('ok success');
-      }, function (error) {
-        console.log('error', error);
-      });
+      var rParams = FAPI.Util.getRequestParameters();
+      FAPI.init(rParams["api_server"], rParams["apiconnection"],
+                /*
+                * Первый параметр:
+                * функция, которая будет вызвана после успешной инициализации.
+                */
+                function() {
+                    alert("Инициализация прошла успешно");
+                    // здесь можно вызывать методы API
+                },
+                /*
+                * Второй параметр:
+                * функция, которая будет вызвана, если инициализация не удалась.
+                */
+                function(error) {
+                    alert("Ошибка инициализации");
+                }
+      );
+      // var config = {
+      //   app_id: "1249394176",
+      //   app_key: "CBAPDJHLEBABABABA"
+      // };
+      //
+      // OKSDK.init(config, function() {
+      //   console.log('ok success');
+      // }, function (error) {
+      //   console.log('error', error);
+      // });
     </script>
   </body>
 </html>
