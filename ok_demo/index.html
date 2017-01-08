@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OK Demo</title>
+  </head>
+  <body>
+    <div id='app'>
+      DEMO OK APP
+    </div>
+    <script src='okjssdk.js'></script>
+    <script>
+      var config = {
+        app_id: ,
+        app_key:
+      };
+
+      OKSDK.init(config, function() {
+        console.log('ok success');
+      }, function (error) {
+        console.log('error', error);
+      });
+    </script>
+  </body>
+</html>
