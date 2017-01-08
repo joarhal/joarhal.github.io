@@ -11,24 +11,27 @@
     <!-- <script src='okjssdk.js'></script> -->
     <script type="text/javascript" src="//api.ok.ru/js/fapi5.js" defer="defer"></script>
     <script>
-      var rParams = FAPI.Util.getRequestParameters();
-      FAPI.init(rParams["api_server"], rParams["apiconnection"],
-                /*
-                * Первый параметр:
-                * функция, которая будет вызвана после успешной инициализации.
-                */
-                function() {
-                    alert("Инициализация прошла успешно");
-                    // здесь можно вызывать методы API
-                },
-                /*
-                * Второй параметр:
-                * функция, которая будет вызвана, если инициализация не удалась.
-                */
-                function(error) {
-                    alert("Ошибка инициализации");
-                }
-      );
+      setTimeout(function() {
+        var rParams = FAPI.Util.getRequestParameters();
+        FAPI.init(rParams["api_server"], rParams["apiconnection"],
+                  /*
+                  * Первый параметр:
+                  * функция, которая будет вызвана после успешной инициализации.
+                  */
+                  function() {
+                      alert("Инициализация прошла успешно");
+                      // здесь можно вызывать методы API
+                  },
+                  /*
+                  * Второй параметр:
+                  * функция, которая будет вызвана, если инициализация не удалась.
+                  */
+                  function(error) {
+                      alert("Ошибка инициализации");
+                  }
+        );
+      }, 5000);
+
       // var config = {
       //   app_id: "1249394176",
       //   app_key: "CBAPDJHLEBABABABA"
