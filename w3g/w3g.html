@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>w3g</title>
+        <title>Wonderlings</title>
         <meta charset="UTF-8">
     </head>
     <body>
         <style>
             body {
-                background: rgb(2,0,36);
-                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                background: rgb(235,192,104);
+                background: radial-gradient(circle, rgba(235,192,104,1) 0%, rgba(220,157,81,1) 100%);
             }
         </style>
         <canvas id="canvas"></canvas>
@@ -17,7 +17,7 @@
             function printProgress(current, total) {
                 console.log("Loaded " + current + " of " + total + " bytes");
             }
-            var engine = new Engine({"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"w3g","experimentalVK":false,"fileSizes":{"w3g.pck":10608,"w3g.wasm":35372023},"focusCanvas":true,"gdextensionLibs":[]});
+            var engine = new Engine({"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"w3g","experimentalVK":false,"fileSizes":{"w3g.pck":12000,"w3g.wasm":35372023},"focusCanvas":true,"gdextensionLibs":[]});
             engine.startGame({ onProgress: printProgress });
         </script>
     </body>
