@@ -7,8 +7,9 @@
     <body>
         <style>
             body {
-                background: rgb(235,192,104);
-                background: radial-gradient(circle, rgba(235,192,104,1) 0%, rgba(220,157,81,1) 100%);
+                background: #E76600;
+                /* background: rgb(235,192,104); */
+                /* background: radial-gradient(circle, rgba(235,192,104,1) 0%, rgba(220,157,81,1) 100%); */
             }
         </style>
         <canvas id="canvas"></canvas>
@@ -17,7 +18,7 @@
             function printProgress(current, total) {
                 console.log("Loaded " + current + " of " + total + " bytes");
             }
-            var engine = new Engine({"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"w3g","experimentalVK":false,"fileSizes":{"w3g.pck":1507632,"w3g.wasm":35372023},"focusCanvas":true,"gdextensionLibs":[]});
+            var engine = new Engine({"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"w3g","experimentalVK":false,"fileSizes":{"w3g.pck":1508336,"w3g.wasm":35372023},"focusCanvas":true,"gdextensionLibs":[]});
             engine.startGame({ onProgress: printProgress });
         </script>
     </body>
