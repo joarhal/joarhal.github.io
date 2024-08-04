@@ -14,6 +14,7 @@ const init = async () => {
   if (res.ok) {
     var data = await res.json();
     if (!data.ok) {
+      console.log("fail: fetch(W3G_SERVER)");
       failApp("Something went wrong, please try again later.\n Error: 6548147");
     }
   }
