@@ -31,12 +31,12 @@ const init = async () => {
   WebApp.show_alert(`Verified: ${verified}`);
 };
 
-const failApp = (message) => {
+const failApp = (message, error) => {
   if (window?.Telegram?.WebApp?.init_data) {
-    WebApp.show_alert(message);
+    WebApp.show_alert(message, error.message);
     WebApp.close();
   } else {
-    alert(message);
+    alert(message + "\n" + error.message);
   }
 };
 
@@ -44,6 +44,6 @@ const failApp = (message) => {
   try {
     await init();
   } catch (error) {
-    failApp("Something went wrong, please try again later.\n Error: 6545192");
+    failApp("Something went wrong, please try again later.\n Error: 6545192", error);
   }
 })();
