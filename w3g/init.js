@@ -24,10 +24,10 @@ const init = async () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      data: WebApp.initData || "abcd",
+      data: WebApp.initData || "null",
     }),
   });
-  const verified = (await res.json()).verified; 
+  const verified = (await res.json()).verified;
   WebApp.show_alert(`Verified: ${verified}`);
 };
 
@@ -44,6 +44,9 @@ const failApp = (message, error) => {
   try {
     await init();
   } catch (error) {
-    failApp("Something went wrong, please try again later.\n Error: 6545192", error);
+    failApp(
+      "Something went wrong, please try again later.\n Error: 6545192",
+      error
+    );
   }
 })();
