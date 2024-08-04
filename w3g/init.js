@@ -18,6 +18,7 @@ const init = async () => {
     }
   }
 
+  console.log("======healthcheck======");
   res = await fetch(W3G_SERVER + "healthcheck");
   if (!res.ok) {
     failApp("Something went wrong, please try again later.\n Error: 6545191");
