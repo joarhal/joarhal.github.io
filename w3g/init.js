@@ -1,5 +1,4 @@
 const init = async () => {
-  console.log("init.js");
   const WebApp = window.Telegram?.WebApp;
   const W3G_SERVER = "https://0uitsxjg97.whs.lol/";
 
