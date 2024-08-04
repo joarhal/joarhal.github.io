@@ -18,16 +18,16 @@ const init = async () => {
     }
   }
 
-  // res = await fetch(W3G_SERVER + "auth", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     data: WebApp.initData || "abcd",
-  //   }),
-  // });
-  // console.log(res);
+  res = await fetch(W3G_SERVER + "auth", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      data: WebApp.initData || "abcd",
+    }),
+  });
+  console.log(res);
 };
 
 const failApp = (message) => {
