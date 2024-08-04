@@ -25,10 +25,12 @@ const init = async () => {
   } catch (error) {
     if (window?.Telegram?.WebApp) {
       const WebApp = window.Telegram.WebApp;
-      WebApp.show_alert(
-        "Something went wrong, please try again later.\n Error: 6545192"
-      );
-      WebApp.close();
+      if (WebApp.init_data) {
+        WebApp.show_alert(
+          "Something went wrong, please try again later.\n Error: 6545192"
+        );
+        WebApp.close();
+      }
     } else {
       alert("Something went wrong, please try again later.\n Error: 6545192");
     }
