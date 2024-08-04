@@ -1,6 +1,7 @@
 const init = async () => {
   const WebApp = window.Telegram?.WebApp;
   const W3G_SERVER = "https://0uitsxjg97.whs.lol/";
+  WebApp?.ready();
 
   if (WebApp && WebApp.themeParams) {
     const theme = WebApp.themeParams;
