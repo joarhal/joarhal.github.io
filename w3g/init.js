@@ -28,12 +28,12 @@ const init = async () => {
     }),
   });
   const verified = (await res.json()).verified;
-  WebApp.show_alert(`Verified: ${verified}`);
+  WebApp.showAlert(`Verified: ${verified}`);
 };
 
 const failApp = (message, error) => {
   if (window?.Telegram?.WebApp?.init_data) {
-    WebApp.show_alert(message, error.message);
+    WebApp.showAlert(message, error.message);
     WebApp.close();
   } else {
     alert(message + "\n" + error.message);
