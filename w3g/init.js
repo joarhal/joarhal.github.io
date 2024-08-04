@@ -24,7 +24,7 @@ const init = async () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      data: WebApp.initData || "abcd"
+      data: WebApp.initData || "abcd",
     }),
   });
 };
