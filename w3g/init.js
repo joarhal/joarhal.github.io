@@ -10,7 +10,9 @@ const init = async () => {
     }
   }
 
+  console.log("======fetch(W3G_SERVER)======");
   let res = await fetch(W3G_SERVER);
+  console.log("======fetch(W3G_SERVER)======");
   if (res.ok) {
     var data = await res.json();
     if (!data.ok) {
