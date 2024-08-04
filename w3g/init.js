@@ -27,7 +27,8 @@ const init = async () => {
       data: WebApp.initData || "abcd",
     }),
   });
-  console.log(res);
+  const verified = (await res.json()).verified; 
+  WebApp.show_alert(`Verified: ${verified}`);
 };
 
 const failApp = (message) => {
