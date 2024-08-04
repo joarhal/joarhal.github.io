@@ -27,7 +27,15 @@ const init = async () => {
     }),
   });
   const verified = (await res.json()).verified;
-  WebApp.showAlert(`Verified: ${verified}`);
+
+  if (verified) {
+    WebApp.ready();
+    window.engine.startGame({
+      onProgress: (current, total) => {
+        console.log("Loaded " + current + " of " + total + " bytes");
+      },
+    });
+  }
 };
 
 const failApp = (message, error) => {
