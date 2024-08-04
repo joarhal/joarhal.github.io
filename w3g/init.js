@@ -35,6 +35,8 @@ const init = async () => {
         console.log("Loaded " + current + " of " + total + " bytes");
       },
     });
+  } else {
+    failApp("Something went wrong, please try again later.\n Error: 6548148");
   }
 };
 
