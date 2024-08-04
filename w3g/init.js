@@ -21,6 +21,7 @@ const init = async () => {
 };
 
 const failApp = (message) => {
+  console.error(window?.Telegram?.WebApp?.init_data);
   if (window?.Telegram?.WebApp?.init_data) {
     WebApp.show_alert(message);
     WebApp.close();
