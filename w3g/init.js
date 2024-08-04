@@ -17,11 +17,19 @@ const init = async () => {
       failApp("Something went wrong, please try again later.\n Error: 6548147");
     }
   }
-  // WebApp.ready();
+
+  var res = await fetch(W3G_SERVER + "auth", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      data: WebApp.initData || "abcd"
+    }),
+  });
 };
 
 const failApp = (message) => {
-  console.error(window?.Telegram?.WebApp?.init_data);
   if (window?.Telegram?.WebApp?.init_data) {
     WebApp.show_alert(message);
     WebApp.close();
