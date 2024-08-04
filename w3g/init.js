@@ -10,7 +10,7 @@ const init = async () => {
     }
   }
 
-  var res = await fetch(W3G_SERVER);
+  let res = await fetch(W3G_SERVER);
   if (res.ok) {
     var data = await res.json();
     if (!data.ok) {
@@ -18,7 +18,15 @@ const init = async () => {
     }
   }
 
-  var res = await fetch(W3G_SERVER + "auth", {
+  res = await fetch(W3G_SERVER + "healthcheck");
+  if (!res.ok) {
+    failApp("Something went wrong, please try again later.\n Error: 6545191");
+  }
+  const healthcheck = await res.json();
+  console.log(healthcheck);
+
+
+  res = await fetch(W3G_SERVER + "auth", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
