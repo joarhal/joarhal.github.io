@@ -23,6 +23,7 @@ const init = async () => {
     failApp("Something went wrong, please try again later.\n Error: 6545191");
   }
   const healthcheck = await res.json();
+  console.log("======healthcheck======");
   console.log(healthcheck);
 
 
